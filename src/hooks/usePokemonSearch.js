@@ -48,7 +48,7 @@ function usePokemonSearch(query) {
 
             if (!ignore) {
                 setPokemon({ battle: resB_Body, species: resS_Body } || { battle: [], species: [] })
-                console.log("Response: ", pokemon)
+                //console.log("Response: ", pokemon)
                 setLoading(false)
             }
         }
