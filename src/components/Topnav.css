@@ -1,14 +1,38 @@
+* {
+    margin: 0px;
+}
+
+ul.top_style {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: red;
+}
+
+li.top_style {
+    float: left;
+}
+
+li a.top_style {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    padding: 15px 15px;
+    text-decoration: none;
+}
+
 .navbar {
-    position: relative;
+    background: red;
   }
   button {
     cursor: pointer;
     background: transparent;
     border: none;
-    font-size: 20px;
+    font-size: 65px;
   }
   .navbar .toggle {
-    position: fixed;
     left: 30px;
     top: 40px;
     cursor: pointer;
@@ -16,6 +40,7 @@
     border: none;
   }
   .menu-nav {
+    padding: 0;
     list-style: none;
     position: absolute;
     background: #fff;
@@ -35,6 +60,19 @@
     transform: translateX(0px);
   }
   .menu-nav li a, .menu-nav li span {
-    display: block;
+    display: inline-block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 25px;
+    font-size: x-large;
     padding: 1rem;
+  }
+
+  .menu-nav li:hover {
+    background-color: lightgray;
+  }
+
+  .menu-nav li a:hover {
+    background-color: lightgray;
   }
