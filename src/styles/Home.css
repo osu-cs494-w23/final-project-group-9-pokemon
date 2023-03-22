@@ -1,0 +1,56 @@
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+h1 {
+    margin: 20px;
+    font-size: 50px;
+    font-family: comfortaa;
+}
+
+img {
+    padding: 10px 10px;
+    max-height: 20em;
+    height: auto;
+    /*border-bottom-style: dotted;
+    border-color: lightcoral;*/
+}
+
+ul.home_style {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li.home_style {
+    float: none;
+    background-color: gainsboro;
+    padding: 5px 5px;
+    margin: 15px;
+    border-style: solid;
+}
+
+li a.home_style {
+    display: inline-block;
+    width: 1000px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 25px;
+    font-size: 50px;
+    padding: 1rem;
+}
+
+li:hover.home_style {
+    background-color: lightcoral;
+}
+
+li a:hover.home_style {
+    background-color: lightcoral;
+}
