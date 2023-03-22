@@ -42,7 +42,7 @@ function Home() {
                 <img src={`icons/eevee_icon.png`} onClick={start}/>
                 <ul className="home_style">
                     <li className="home_style"><NavLink to="/pokedex" className="home_style">PokéDex</NavLink></li>
-                    <li className="home_style"><NavLink to="/abilitydex" className="home_style">AbilityDex</NavLink></li>
+                    <li className="home_style"><NavLink to="/abilities" className="home_style">AbilityDex</NavLink></li>
                     <li className="home_style"><NavLink to="/movedex" className="home_style">MoveDex</NavLink></li>
                 </ul>
             </div>

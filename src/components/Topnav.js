@@ -38,10 +38,10 @@ function Topnav() {
                         <NavLink to="/pokedex" onClick={() => setNavOpen(false)}>PokéDex</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/abilitydex" onClick={() => setNavOpen(false)}>AbilityDex</NavLink>
+                        <NavLink to="/abilities" onClick={() => setNavOpen(false)}>AbilityDex</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/movedex" onClick={() => setNavOpen(false)}>MoveDex</NavLink>
+                        <NavLink to="/moves" onClick={() => setNavOpen(false)}>MoveDex</NavLink>
                     </li>
                 </ul>
             </nav>
