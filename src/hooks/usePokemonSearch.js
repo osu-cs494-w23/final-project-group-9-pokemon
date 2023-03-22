@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 function usePokemonSearch(query) {
-    const [ pokemon, setPokemon ] = useState({ battle: null, species: null })
+    const [ pokemon, setPokemon ] = useState({ battle: [], species: [] })
     const [ loading, setLoading ] = useState(false)
     const [ error, setError ] = useState(false)
 
