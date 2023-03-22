@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, Outlet, useParams, useSearchParams } from "react-router-dom";
+import Topnav from "../components/Topnav";
 
 import useAbilitySearch from "../hooks/useAbilitySearch";
 
@@ -17,6 +18,7 @@ function Abilities () {
         ))
         return (
             <div>
+                <Topnav />
                 {localAbilityList}
             </div>
         )
