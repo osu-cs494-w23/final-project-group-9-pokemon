@@ -12,17 +12,7 @@ import { Pokemon } from './Pokemon'
 const pokemonData = pokemonJson
 var searchQuery
 
-function SearchBar() {
-    return (
-        <form  
-            onSubmit={e => {
-            e.preventDefault()
-            }}>
-                <input placeholder="Search for a Pokemon..." />
-                <button type="submit">Search</button>
-        </form>
-    )
-}
+
 
 function PokemonCard(props) {
     return (
@@ -47,20 +37,36 @@ function PokemonCard(props) {
 }
 
 function Pokedex() {
+    const [ searchVal, setSearchVal ] = useState("")
+    const [ filteredData, setFilter ] = useState([])
+
+    const handleChange = (event) => {
+        setSearchVal(event.target.value)
+        console.log("Input: ", searchVal)
+    }
+
+    useEffect(() => {
+        //const newPokeData = pokemonData.filter(value => value.name.toLowerCase().includes(searchVal.toLowerCase()))
+        const newPokeData = searchVal ? pokemonData.filter(item => item.name.includes(searchVal)) : pokemonData
+        setFilter(newPokeData)
+        console.log("New List: ", filteredData)
+    }, [searchVal])
+
     return (
         <>
             <Topnav/>
-            <SearchBar/>
+
+            <input placeholder="Search for a Pokemon..." type="text" onChange={handleChange}/>
             <div className='pokemonList'>
-            {Object.keys(pokemonData.filter(PokemonCard => PokemonCard.pokemonName.includes('C'))).map(key => (
-            /* {Object.keys(pokemonData).map(key => ( */
-                <NavLink className='pokemonLink' key={key} to={`/pokemon/${key}`}>
+            
+            {Object.keys(filteredData).map(key => ( 
+                <NavLink className='pokemonLink' key={key} to={`/pokemon/${filteredData[key].dexNum}`}>
                     <PokemonCard
-                    pokemonName={pokemonData[key].name}
-                    dexNumber={pokemonData[key].dexNum}
-                    typeOne={pokemonData[key].typeOne}
-                    typeTwo={pokemonData[key].typeTwo}
-                    image={pokemonData[key].photoUrl}
+                    pokemonName={filteredData[key].name}
+                    dexNumber={filteredData[key].dexNum}
+                    typeOne={filteredData[key].typeOne}
+                    typeTwo={filteredData[key].typeTwo}
+                    image={filteredData[key].photoUrl}
                 />
                 </NavLink>
             ))}
