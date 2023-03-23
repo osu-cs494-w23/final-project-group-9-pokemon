@@ -4,6 +4,7 @@ import { Outlet, useParams, useSearchParams } from 'react-router-dom'
 import useMoveSearch from '../hooks/useMoveSearch'
 import usePokemonSearch from '../hooks/usePokemonSearch'
 import useSpecificMoveSearch from '../hooks/useSpecificMoveSearch'
+import Topnav from "../components/Topnav";
 
 function Move() {
     // I'm just testing things here, feel free to overwrite this page and its elements - Conner
@@ -16,7 +17,7 @@ function Move() {
     // //console.log("Movelist Data: ", movelist)
     // console.log("Specific Move Data: ", movedata)
     const { moveName } = useParams();
-    // console.log(pokemonName);
+    console.log(moveName);
     // console.log(usePokemonSearch(pokemonName.species));
     const [movedata, loading, error] = useSpecificMoveSearch(moveName);
     console.log(movedata);
@@ -31,8 +32,9 @@ function Move() {
         return (
         <>
             <div>
-                <h1>{moveName}</h1>
-                <h2>{movedata.accuracy}</h2>
+                <Topnav />
+                <h1>{movedata.name}</h1>
+                <h2>{movedata.flavor_text_entries[0].flavor_text}</h2>
             </div>
                 
         </>

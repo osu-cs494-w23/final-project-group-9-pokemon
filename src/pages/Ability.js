@@ -16,7 +16,7 @@ function Ability() {
             <>
                 <div>
                     <Topnav />
-                    <h1>{abilityName}</h1>
+                    <h1>{abilitydata.names[7].name}</h1>
                     <h2>{abilitydata.effect_entries[1].effect}</h2>
                 </div>
             </>
