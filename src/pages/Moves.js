@@ -4,12 +4,10 @@ import { Link, Outlet, useParams, useSearchParams } from 'react-router-dom'
 import useMoveSearch from '../hooks/useMoveSearch'
 import usePokemonSearch from '../hooks/usePokemonSearch'
 import useSpecificMoveSearch from '../hooks/useSpecificMoveSearch'
+import Topnav from "../components/Topnav";
 
 // structure of pokemon.json
 // {"dexNum": , "name": "", "typeOne": "", "typeTwo": "", "photoUrl": "https://img.pokemondb.net/sprites/black-white/normal/.png"}
-function Move(){
-
-}
 
 function Moves () {
     // I'm just testing things here, feel free to overwrite this page and its elements - Conner
@@ -27,13 +25,22 @@ function Moves () {
     if (movelist.results){
             console.log(movelist.responseBody)
             console.log("im here")
-            const localMoveList  = movelist.results.map(item => (
+            // const localMoveList  = movelist.results.map(item => (
+            // <div key={item.id}>
+            //     <Link to={`/moves/${item.name}`}>{item.name}</Link>
+            // </div>
+            // ));
+            const localMoveList = movelist.results.map(item => {
+            const lastNumber = item.url.match(/\d+\/?$/)[0].replace('/', '');
+            return (
             <div key={item.id}>
-                <Link to={`/moves/${item.name}`}>{item.name}</Link>
+                <Link to={`/moves/${lastNumber}`}>{item.name}</Link>
             </div>
-            ));
+            );
+        });
             return (
             <div>
+                <Topnav />
                 {localMoveList}
             </div>
             ); 

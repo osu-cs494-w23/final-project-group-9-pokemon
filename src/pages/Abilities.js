@@ -11,11 +11,15 @@ function Abilities () {
     if (abilitylist.results) {
         console.log(abilitylist.responseBody)
         console.log("abilitylist is called")
-        const localAbilityList = abilitylist.results.map(item => (
+
+        const localAbilityList = abilitylist.results.map(item => {
+            const lastNumber = item.url.match(/\d+\/?$/)[0].replace('/', '');
+            return (
             <div key={item.id}>
-                <Link to={`/abilities/${item.name}`}>{item.name}</Link>
+                <Link to={`/abilities/${lastNumber}`}>{item.name}</Link>
             </div>
-        ))
+            );
+        });
         return (
             <div>
                 <Topnav />
