@@ -9,7 +9,7 @@
     margin: 15px;
 }
 
-.flex-container {
+.flex-container-pokemon {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -39,12 +39,19 @@
     margin: 15px;
 }
 
-a {
-    font-size: 1em;
-    font-weight: bold;
+a.abilities-tab {
+/* a { */
+    display: inline-block;
+    width: 1000px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 12.5px;
+    font-size: 25px;
+    padding: 1rem;
 }
 
-img {
+img.img-pokemon {
     position: absolute;
     top: auto;
     left: 5%;
