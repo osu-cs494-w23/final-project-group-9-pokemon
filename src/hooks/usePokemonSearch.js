@@ -12,6 +12,7 @@ function usePokemonSearch(query) {
             setLoading(true)
             let resB_Body = {}
             let resS_Body = {}
+            let resF_Body = {}
             try {
                 const resB = await fetch(
                     `https://pokeapi.co/api/v2/pokemon/${query}`,
@@ -25,16 +26,25 @@ function usePokemonSearch(query) {
                 )
                 console.log("Species Data Res: ", resS)
 
-                if (resB.status !== 200 || resS.status !== 200) {
+                const resF = await fetch(
+                    `https://pokeapi.co/api/v2/pokemon-form/${query}`,
+                    { signal: controller.signal }
+                )
+                console.log("Forms Data Res: ", resF)
+                
+                if (resB.status !== 200 || resS.status !== 200 || resF.status !== 200) {
                     console.log("==status B: ", resB)
                     console.log("==status S: ", resS)
+                    console.log("==status F: ", resF)
                     setError(true)
                 } else {
                     setError(false)
                     resB_Body = await resB.json()
                     resS_Body = await resS.json()
-                    console.log(resB_Body)
-                    console.log(resS_Body)
+                    resF_Body = await resF.json()
+                    console.log("== resB_Body: ",resB_Body)
+                    console.log("== resS_Body: ",resS_Body)
+                    console.log("== resF_Body: ",resF_Body)
                 }
             } catch (e) {
                 if (e instanceof DOMException) {
@@ -47,7 +57,7 @@ function usePokemonSearch(query) {
             }
 
             if (!ignore) {
-                setPokemon({ battle: resB_Body, species: resS_Body } || { battle: [], species: [] })
+                setPokemon({ battle: resB_Body, species: resS_Body, sprites: resF_Body } || { battle: [], species: [], sprites: [] })
                 //console.log("Response: ", pokemon)
                 setLoading(false)
             }
