@@ -1,0 +1,60 @@
+.poke-profile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: gainsboro;
+    padding: 5px 5px;
+    margin: 15px;
+}
+
+.flex-container-pokemon {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5px 5px;
+    margin: 15px;
+    /* background-color: red; */
+}
+
+.data-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: gainsboro;
+    padding: 15px;
+    margin: 15px;
+}
+
+.move-set-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: gainsboro;
+    padding: 15px;
+    margin: 15px;
+}
+
+a.abilities-tab {
+/* a { */
+    display: inline-block;
+    width: 1000px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 12.5px;
+    font-size: 25px;
+    padding: 1rem;
+}
+
+img.img-pokemon {
+    position: absolute;
+    top: auto;
+    left: 5%;
+    height: 300px;
+    width: 300px;
+}

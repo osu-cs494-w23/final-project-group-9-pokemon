@@ -21,10 +21,12 @@ function Abilities () {
             );
         });
         return (
-            <div>
+            <>
                 <Topnav />
-                {localAbilityList}
-            </div>
+                <div className="flex-container">
+                    <a className="abilities-tab">{localAbilityList}</a>
+                </div>
+            </>
         )
     } else {
         return <h1>Loading...</h1>
