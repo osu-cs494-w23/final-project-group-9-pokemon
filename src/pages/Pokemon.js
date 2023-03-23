@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Outlet, useParams, useSearchParams } from 'react-router-dom'
+import Topnav from '../components/Topnav'
 
 import useMoveSearch from '../hooks/useMoveSearch'
 import usePokemonSearch from '../hooks/usePokemonSearch'
@@ -31,15 +32,16 @@ function SinglePokemon(){
         }
         return (
         <>
+            <Topnav />
             <div className='poke-profile'>
-                <img src={pokemon.battle.sprites.back_default}/>
+                <img className='img-pokemon' src={pokemon.battle.sprites.back_default}/>
                 <h1>#{pokemon.battle.id}</h1>
                 <h1>{pokemon.battle.name}</h1>
                 <h2></h2>
                 <h3>Most Recent Dex Entry:</h3>
                 <h4>{pokemon.species.flavor_text_entries[length -1].flavor_text}</h4>
             </div>
-            <div className='flex-container'>
+            <div className='flex-container-pokemon'>
                 <div>
                     <div className='data-box'>
                         <h2>Battle Data:</h2><br></br>
@@ -89,7 +91,7 @@ function Pokemon() {
 
     return (
         <>
-            <h1>SearchBar</h1>
+            {/* <h1>SearchBar</h1> */}
             <Outlet />
         </>
     )
