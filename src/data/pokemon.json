@@ -90,7 +90,7 @@
     {"dexNum": 89, "name": "Muk", "typeOne": "Poison", "typeTwo": null, "photoUrl": "https://img.pokemondb.net/sprites/black-white/normal/muk.png"},
     {"dexNum": 90, "name": "Shellder", "typeOne": "Water", "typeTwo": null, "photoUrl": "https://img.pokemondb.net/sprites/black-white/normal/shellder.png"},
     {"dexNum": 91, "name": "Cloyster", "typeOne": "Water", "typeTwo": "Ice", "photoUrl": "https://img.pokemondb.net/sprites/black-white/normal/cloyster.png"},
-    {"dexNum": 92, "name": "Ghastly", "typeOne": "Ghost", "typeTwo": "Poison", "photoUrl": "https://img.pokemondb.net/sprites/black-white/normal/ghastly.png"},
+    {"dexNum": 92, "name": "Gastly", "typeOne": "Ghost", "typeTwo": "Poison", "photoUrl": "https://img.pokemondb.net/sprites/black-white/normal/gastly.png"},
     {"dexNum": 93, "name": "Haunter", "typeOne": "Ghost", "typeTwo": "Poison", "photoUrl": "https://img.pokemondb.net/sprites/black-white/normal/haunter.png"},
     {"dexNum": 94, "name": "Gengar", "typeOne": "Ghost", "typeTwo": "Poison", "photoUrl": "https://img.pokemondb.net/sprites/black-white/normal/gengar.png"},
     {"dexNum": 95, "name": "Onix", "typeOne": "Rock", "typeTwo": "Ground", "photoUrl": "https://img.pokemondb.net/sprites/black-white/normal/onix.png"},
