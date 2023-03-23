@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 
 import Home from './pages/Home'
 import {Pokemon, SinglePokemon} from './pages/Pokemon'
+import Pokedex from './pages/Pokedex'
 import Moves from './pages/Moves'
 import Move from './pages/Move'
 import Abilities from './pages/Abilities'
@@ -14,6 +15,10 @@ function App() {
             <Route
                 path="/home"
                 element={<Home />}
+            />
+            <Route
+                path="/pokedex"
+                element={<Pokedex />}
             />
             <Route
                 path="/pokemon"
